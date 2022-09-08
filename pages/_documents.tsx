@@ -7,7 +7,7 @@ import Document, {
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
-class _Document extends Document {
+class _documents extends Document {
   static async getInitialProps(ctx: DocumentContext) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
@@ -44,4 +44,4 @@ class _Document extends Document {
   }
 }
 
-export default _Document;
+export default _documents;
