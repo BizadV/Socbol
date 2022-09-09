@@ -2,7 +2,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import GlobalStyle from "../styles/global";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function _app({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
@@ -15,4 +15,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default _app;
