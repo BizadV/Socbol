@@ -1,6 +1,9 @@
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import { ThemeProvider } from "styled-components";
+
 import GlobalStyle from "../styles/global";
+import lightTheme from "../styles/lightTheme";
 
 function _app({ Component, pageProps }: AppProps) {
   return (
@@ -10,7 +13,9 @@ function _app({ Component, pageProps }: AppProps) {
         <title>socbol</title>
       </Head>
       <GlobalStyle />
-      <Component {...pageProps} />
+      <ThemeProvider theme={lightTheme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }
