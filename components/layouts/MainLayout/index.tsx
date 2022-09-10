@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { ReactNode } from "react";
 
+import { Body } from "./style";
+
 interface MainLayoutProps {
   title: string;
   children: ReactNode;
@@ -17,7 +19,7 @@ export default function MainLayout({
       <Head>
         <title>{seoTitle} | Socbol</title>
       </Head>
-      {children}
+      <Body>{children}</Body>
     </div>
   );
 }
