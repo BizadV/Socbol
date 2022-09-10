@@ -1,10 +1,10 @@
 import Head from "next/head";
 import { ReactNode } from "react";
 
-import { Body } from "./style";
+import { Body, TitleWrapper, TitleText } from "./style";
 
 interface MainLayoutProps {
-  title: string;
+  title?: string;
   children: ReactNode;
   seoTitle?: string;
 }
@@ -15,11 +15,18 @@ export default function MainLayout({
   seoTitle,
 }: MainLayoutProps) {
   return (
-    <div>
+    <>
       <Head>
         <title>{seoTitle} | Socbol</title>
       </Head>
-      <Body>{children}</Body>
-    </div>
+      <Body>
+        {title ? (
+          <TitleWrapper>
+            <TitleText>{title}</TitleText>
+          </TitleWrapper>
+        ) : null}
+        {children}
+      </Body>
+    </>
   );
 }
