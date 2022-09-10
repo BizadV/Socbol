@@ -8,6 +8,7 @@ declare module "styled-components" {
       base: string;
       lg: string;
       xl: string;
+      h2: string;
     };
   }
 }

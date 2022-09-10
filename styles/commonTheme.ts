@@ -4,6 +4,7 @@ const fontSize = {
   base: "1rem",
   lg: "1,125rem",
   xl: "1.25rem",
+  h2: "1.75rem",
 };
 
 const commonTheme = {
